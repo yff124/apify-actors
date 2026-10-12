@@ -12,6 +12,28 @@ Built and maintained by [Felix Yang](https://github.com/yff124).
 All three read **official public JSON endpoints** — no HTML scraping of job pages, so they do not
 silently break when a board restyles its markup.
 
+## The ATS normalizers, standalone
+
+If you only need the job-board part and would rather not run an Actor,
+[`ats_normalizers.py`](ats_normalizers.py) is that logic on its own — standard library only, no
+dependencies. It reads Greenhouse, Ashby and Lever boards and returns one schema.
+
+```bash
+python3 ats_normalizers.py stripe                          # bare slug, auto-detects the provider
+python3 ats_normalizers.py https://jobs.ashbyhq.com/openai # or hand it a careers URL
+python3 ats_normalizers.py greenhouse:gitlab --limit 20
+```
+
+```python
+from ats_normalizers import fetch
+rows = fetch("greenhouse:stripe")   # -> [{"title", "url", "location", "updatedAt", ...}]
+```
+
+It handles the three things that quietly break a multi-vendor pipeline: Lever returns a bare array
+while the others wrap it in `{"jobs": [...]}`; Lever's timestamps are epoch milliseconds while the
+others are ISO strings; and the posting URL lives under `absolute_url`, `jobUrl` and `hostedUrl`
+respectively.
+
 ## Notes on the design
 
 - **Normalized output.** Every source is mapped to the same field names, so one downstream pipeline
