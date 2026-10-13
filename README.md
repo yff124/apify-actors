@@ -3,11 +3,13 @@
 Three Apify Actors that turn public, no-login sources into clean, normalized datasets.
 Built and maintained by [Felix Yang](https://github.com/yff124).
 
-| Actor | What it does | Sources |
-|---|---|---|
-| **ATS Job Board Aggregator** | Paste a company name, board slug, or careers URL → one normalized job dataset | Greenhouse · Ashby · Lever public job-board APIs |
-| **Remote Tech Jobs Aggregator** | Remote-friendly tech job posts with contact emails and remote/US-only filters | Hacker News "Who is hiring?" · V2EX 酷工作 |
-| **Tech & AI Trend Radar** | What tech and AI are talking about right now, ranked by heat | HN front page · HN Show HN · Lobsters · GitHub trending |
+All three are live on the Apify Store — search for them by name, or use the links below.
+
+| Actor | What it does | Sources | Run it |
+|---|---|---|---|
+| **ATS Job Board Aggregator** | Paste a company name, board slug, or careers URL → one normalized job dataset | Greenhouse · Ashby · Lever public job-board APIs | [Apify Store](https://apify.com/felixyang124/ats-job-board-aggregator) |
+| **Remote Tech Jobs Aggregator** | Remote-friendly tech job posts with contact emails and remote/US-only filters | Hacker News "Who is hiring?" · V2EX 酷工作 | [Apify Store](https://apify.com/felixyang124/remote-tech-jobs-aggregator) |
+| **Tech & AI Trend Radar** | What tech and AI are talking about right now, ranked by heat | HN front page · HN Show HN · Lobsters · GitHub trending | [Apify Store](https://apify.com/felixyang124/tech-ai-trend-radar) |
 
 All three read **official public JSON endpoints** — no HTML scraping of job pages, so they do not
 silently break when a board restyles its markup.
