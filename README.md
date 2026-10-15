@@ -7,9 +7,9 @@ All three are live on the Apify Store — search for them by name, or use the li
 
 | Actor | What it does | Sources | Run it |
 |---|---|---|---|
-| **ATS Job Board Aggregator** | Paste a company name, board slug, or careers URL → one normalized job dataset | Greenhouse · Ashby · Lever public job-board APIs | [Apify Store](https://apify.com/felixyang124/ats-job-board-aggregator) |
-| **Remote Tech Jobs Aggregator** | Remote-friendly tech job posts with contact emails and remote/US-only filters | Hacker News "Who is hiring?" · V2EX 酷工作 | [Apify Store](https://apify.com/felixyang124/remote-tech-jobs-aggregator) |
-| **Tech & AI Trend Radar** | What tech and AI are talking about right now, ranked by heat | HN front page · HN Show HN · Lobsters · GitHub trending | [Apify Store](https://apify.com/felixyang124/tech-ai-trend-radar) |
+| **ATS Job Board Aggregator** | Paste a company name, board slug, or careers URL → one normalized job dataset | Greenhouse · Ashby · Lever public job-board APIs | [Apify Store](https://apify.com/fei.yang/ats-job-board-aggregator) |
+| **Remote Tech Jobs Aggregator** | Remote-friendly tech job posts with contact emails and remote/US-only filters | Hacker News "Who is hiring?" · V2EX 酷工作 | [Apify Store](https://apify.com/fei.yang/remote-tech-jobs-aggregator) |
+| **Tech & AI Trend Radar** | What tech and AI are talking about right now, ranked by heat | HN front page · HN Show HN · Lobsters · GitHub trending | [Apify Store](https://apify.com/fei.yang/tech-ai-trend-radar) |
 
 All three read **official public JSON endpoints** — no HTML scraping of job pages, so they do not
 silently break when a board restyles its markup.
